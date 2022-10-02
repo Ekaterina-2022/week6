@@ -1,0 +1,47 @@
+body {
+  font-size: 200%;
+  text-align: center;
+}
+.header {
+  text-align: center;
+  height: 100px;
+}
+.container {
+  display: grid;
+  width: 1480px;
+  border: 1px solid red;
+  grid-template-areas:
+    "header header header header"
+    "main main main aside"
+    "footer footer footer footer";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 200px 450px 150px;
+}
+.header {
+  grid-area: header;
+  border: 1px solid yellow;
+}
+.main {
+  grid-area: main;
+  border: 1px solid black;
+}
+.aside {
+  grid-area: aside;
+  border: 1px solid black;
+}
+.footer {
+  grid-area: footer;
+  display: flex;
+  border: 1px solid black;
+  justify-content: row;
+  justify-content: space-evenly;
+}
+.inside {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+.inside #one {
+  flex: 0 0 90%;
+}
